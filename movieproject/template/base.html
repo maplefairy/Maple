@@ -1,0 +1,25 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movies</title>
+    <style>
+        body {
+  font: 1rem/1.5 var(--bs-font-sans-serif);color:brown;
+}
+    </style>
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+</head>
+<body>
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand">
+      <img src="{% static 'lg.jpg' %}" alt="Logo" width="60" height="45" class="d-inline-block align-text-top">
+       Harry Potter
+    </a>
+  </div>
+</nav>
+{% block body %}
+{% endblock %}
+</body>
+</html>

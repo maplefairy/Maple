@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block body %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Harry Potter</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+           <img src="{{movie.img.url}}" width="350" height="420">
+        </div>
+<div class="col-md-6">
+    <h2>{{movie.name}}</h2>
+    <h6>{{movie.desc}}</h6>
+    <h4>{{movie.year}}</h4>
+    <a class="btn btn-warning" href="{% url 'update' movie.id %}" > Update </a>
+    &nbsp;<a class="btn btn-danger" href="{% url 'delete' movie.id %}" > Delete </a>
+</div>
+
+    </div>
+</div>
+
+{% endblock %}
+</body>
+</html>
